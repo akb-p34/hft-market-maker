@@ -37,6 +37,8 @@ There are two pieces.
 - Orders rest for 30 seconds, then get cancelled and re-quoted.
 - Every 20 minutes the bot flattens its position, and at the end of the session it cancels everything and liquidates.
 
+`run.py` doesn't call `avellaneda_stoikov.py`. The A-S model has its own quoting loop (`run_stoikov_strategy`), and we traded with more than one of these files during the competition.
+
 `run.py` also keeps other versions of the quoting logic we tried (a moving-average quote, a MACD trend filter, and a Bollinger band spread capture). The main loop doesn't call them, but they show how the approach changed.
 
 ## Files
@@ -60,4 +62,4 @@ Later that semester, Akbar and a different team rebuilt a simpler version of thi
 
 ## Sharing
 
-The code is shared with the team's knowledge, and all rights stay with its four authors, so there is no open-source license.
+Akbar published this copy with the team credited above. All rights stay with its four authors, so there's no open-source license.
